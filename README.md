@@ -39,4 +39,3 @@ f2(aba) = [aab, baa]
 >f2 ( 'bac' )
 f2(bac) = []
 >exit
-
