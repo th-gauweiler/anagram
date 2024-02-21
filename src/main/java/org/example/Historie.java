@@ -16,7 +16,8 @@ public class Historie {
             history.put(anagram, newList);
         }
         List<String> currentList = history.get(anagram);
-        currentList.add(anagram.getSeed());
+        if (!currentList.contains(anagram.getSeed()))
+            currentList.add(anagram.getSeed());
     }
 
     public List<String> listFor(String seed) {

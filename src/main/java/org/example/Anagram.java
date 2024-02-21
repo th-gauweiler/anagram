@@ -15,7 +15,8 @@ final public class Anagram {
 
     public Anagram(Historie historie, String seed) {
         this(seed);
-        historie.add(this);
+        if (historie != null)
+            historie.add(this);
     }
 
 
