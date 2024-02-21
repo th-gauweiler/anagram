@@ -3,15 +3,21 @@ package org.example;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Anagram {
+final public class Anagram {
 
-    String seed;
+    private String seed;
     private Map<Byte, Integer> map = new HashMap<>();
 
     public Anagram(String s) {
         seed = s;
         transform(s);
     }
+
+    public Anagram(Historie historie, String seed) {
+        this(seed);
+        historie.add(this);
+    }
+
 
     private void transform(String s) {
         for (Byte c : s.toLowerCase().getBytes()) {
@@ -58,5 +64,23 @@ public class Anagram {
             // Recursive call
             printPermutn(ros, ans + ch);
         }
+    }
+
+    public String getSeed() {
+        return seed;
+    }
+
+    @Override
+    public boolean equals(Object other) {
+        if (this == other)
+            return true;
+        if (other == null || other.getClass() != getClass())
+            return false;
+        return this.map.equals(((Anagram)other).map);
+    }
+
+    @Override
+    public int hashCode() {
+        return map.hashCode();
     }
 }
