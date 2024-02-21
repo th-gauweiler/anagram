@@ -1,6 +1,22 @@
 # anagram
 
 ```
+User@DESKTOP-R53SSAR MINGW64 ~/IdeaProjects/anagram/build/libs (main)
+$ java -jar anagram-1.0-SNAPSHOT.jar compare 'abb' 'bab'
+Hello and welcome to Anagram!
+abb and bab are anagrams
+
+User@DESKTOP-R53SSAR MINGW64 ~/IdeaProjects/anagram/build/libs (main)
+$ java -jar anagram-1.0-SNAPSHOT.jar compare 'abb' 'bac'
+Hello and welcome to Anagram!
+abb and bac are not anagrams
+
+User@DESKTOP-R53SSAR MINGW64 ~/IdeaProjects/anagram/build/libs (main)
+$ java -jar anagram-1.0-SNAPSHOT.jar printAll 'abc'
+Hello and welcome to Anagram!
+all anagrams for abc:
+abc acb bac bca cab cba
+
 $ java -jar anagram-1.0-SNAPSHOT.jar cli
 Hello and welcome to Anagram!
 switched to interactive mode
@@ -23,3 +39,4 @@ f2(aba) = [aab, baa]
 >f2 ( 'bac' )
 f2(bac) = []
 >exit
+
